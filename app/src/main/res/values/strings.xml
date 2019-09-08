@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iroiro_test</string>
+    <string name="labelChange">Change!</string>
 </resources>
