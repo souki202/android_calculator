@@ -6,9 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import com.example.iroiro_test.R
 
 class MainFragment : Fragment() {
+
+    private val labelChangeButtonClickListener = {_: View ->
+        this@MainFragment.view!!.findViewById<TextView>(R.id.textView).text = "changed!!!"
+    }
 
     companion object {
         fun newInstance() = MainFragment()
@@ -26,7 +32,9 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        view!!.findViewById<Button>(R.id.labelChangeButton).setOnClickListener(labelChangeButtonClickListener)
     }
+
 
 }
