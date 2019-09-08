@@ -13,8 +13,10 @@ import com.example.iroiro_test.R
 class MainFragment : Fragment() {
 
     private val labelChangeButtonClickListener = {_: View ->
-        this@MainFragment.view!!.findViewById<TextView>(R.id.textView).text = "changed!!!"
+        this@MainFragment.view!!.findViewById<TextView>(R.id.textView).text = "this has a sepll miss."
     }
+
+    private val labelCahngeButton = {}
 
     companion object {
         fun newInstance() = MainFragment()
