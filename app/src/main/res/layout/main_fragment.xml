@@ -25,32 +25,31 @@
             android:gravity="center_vertical"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="overview"
             app:layout_column="0"
             app:layout_gravity="fill"
             app:layout_row="0"
             app:layout_rowWeight="1" />
 
-        <TextView
+        <com.example.my_calc.my.ExpressionInputArea
             android:id="@+id/expressionInputArea"
             android:layout_width="match_parent"
+            android:focusableInTouchMode="true"
             android:gravity="center_vertical"
+            android:inputType="text"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="expression"
+            android:textSize="28sp"
             app:layout_column="0"
             app:layout_gravity="fill"
             app:layout_row="1"
-            app:layout_rowWeight="4" />
+            app:layout_rowWeight="4" /><requestFocus/>
 
         <TextView
             android:id="@+id/answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:paddingStart="8dp"
             android:paddingRight="8dp"
-            android:text="answer"
             android:textAlignment="viewEnd"
             app:layout_column="0"
             app:layout_gravity="fill"
@@ -103,22 +102,6 @@
             app:layout_rowWeight="1" />
 
         <Button
-            android:id="@+id/numPadC"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginBottom="2dp"
-            android:background="@android:color/darker_gray"
-            android:text="C"
-            app:layout_column="1"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="0"
-            app:layout_rowWeight="1" />
-
-        <Button
             android:id="@+id/numPadDel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,7 +110,7 @@
             android:layout_marginRight="2dp"
             android:layout_marginBottom="2dp"
             android:background="@android:color/darker_gray"
-            android:text="←"
+            android:text="DEL"
             app:layout_column="2"
             app:layout_columnWeight="1"
             app:layout_gravity="fill"
@@ -381,25 +364,66 @@
         android:id="@+id/gridLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:columnCount="4"
         app:layout_constraintBottom_toTopOf="@+id/inputButtonArea"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expressionArea">
+        app:layout_constraintTop_toBottomOf="@+id/expressionArea"
+        app:rowCount="4">
 
         <Button
-            android:id="@+id/button21"
-            android:layout_width="wrap_content"
+            android:id="@+id/cursorLeft"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/darker_gray"
+            android:text="@string/cursorMoveLeft"
+            app:layout_column="2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/cursorRight"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/darker_gray"
+            android:text="@string/cursorMoveRight"
+            app:layout_column="3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/darker_gray"
             android:text="Button"
             app:layout_column="0"
+            app:layout_columnWeight="1"
             app:layout_row="0" />
 
         <Button
-            android:id="@+id/button22"
-            android:layout_width="wrap_content"
+            android:id="@+id/button28"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/darker_gray"
             android:text="Button"
             app:layout_column="1"
+            app:layout_columnWeight="1"
             app:layout_row="0" />
+
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
