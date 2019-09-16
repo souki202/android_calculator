@@ -1,4 +1,4 @@
-package com.example.iroiro_test.ui.main
+package com.example.my_calc.ui.main
 
 import androidx.lifecycle.ViewModel
 

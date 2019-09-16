@@ -1,8 +1,8 @@
-package com.example.iroiro_test
+package com.example.my_calc
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.iroiro_test.ui.main.MainFragment
+import com.example.my_calc.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

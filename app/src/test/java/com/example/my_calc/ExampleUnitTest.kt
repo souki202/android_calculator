@@ -1,4 +1,4 @@
-package com.example.iroiro_test
+package com.example.my_calc
 
 import org.junit.Test
 
