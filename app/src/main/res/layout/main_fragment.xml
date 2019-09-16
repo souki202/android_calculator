@@ -7,33 +7,59 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/ExpressionArea"
-        android:layout_width="409dp"
-        android:layout_height="200dp"
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/expressionArea"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:columnCount="1"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/expressionOverview"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Monday" />
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="overview"
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
+        <TextView
+            android:id="@+id/expressionInputArea"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="expression"
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="4" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wednesday" />
-    </com.google.android.material.tabs.TabLayout>
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingRight="8dp"
+            android:text="answer"
+            android:textAlignment="viewEnd"
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="2"
+            app:layout_rowWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
 
     <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/InputButtonArea"
+        android:id="@+id/inputButtonArea"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:columnCount="4"
@@ -353,14 +379,27 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout2"
-        android:layout_width="409dp"
-        android:layout_height="137dp"
-        app:layout_constraintBottom_toTopOf="@+id/InputButtonArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/inputButtonArea"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ExpressionArea"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/expressionArea">
 
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            app:layout_column="1"
+            app:layout_row="0" />
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
